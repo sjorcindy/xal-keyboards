@@ -1,0 +1,37 @@
+
+Installation
+------------
+
+1. Download the ``xal_phonetic`` file in this directory. You can click on the file, click on "raw," and save the file. You can also copy this entire ``/linux`` directory by running the following:
+
+::
+
+    $ git clone git@github.com:sjorcindy/xal-keyboards.git
+
+2. Put the "xal_phonetic" file in /usr/share/X11/xkb/symbols by running the following:
+
+::
+
+    $ sudo cp xal_phonetic /usr/share/X11/xkb/symbols 
+
+3. Add a layout entry in the ``evdev.xml`` file in the ``/usr/share/X11/xkb/rules`` directory. Open the file with a text editor (you will most likely need the ``sudo`` command in front of the editor command). Search for ``</layoutList>``, and insert the following layout block between the last ``</layout>`` and ``</layoutList>``:
+
+::
+
+     <layout>
+       <configItem>
+         <name>xal_phonetic</name>
+         <shortDescription>xal_phonetic</shortDescription>
+         <description>Kalmyk (phonetic) </description>
+         <languageList><iso639Id>xal</iso639Id></languageList>
+       </configItem>
+     </layout>
+
+4. Save the file, exit the editor, and restart cinnamon by running the following:
+
+::
+
+    $ cinnamon --replace
+
+5. Go back to your keyboard layout settings, and you should be able to find the layout under "Kalmyk (phonetic)" in the list.
+
