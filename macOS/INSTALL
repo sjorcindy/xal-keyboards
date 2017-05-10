@@ -1,0 +1,12 @@
+
+Installation
+------------
+
+1. Download the two .keylayout files.
+2. Save the files to the Keyboard\ Layouts/ folder. You can do this by opening the file, and selecting File -> Install, or running the following on the command line:
+
+    $ sudo cp xal.keylayout ~/Library/Keyboard\ Layouts/
+    $ sudo cp xal-phonetic.keylayout ~/Library/Keyboard\ Layouts/
+
+3. Go to System Preferences -> Keyboard -> Input Sources. Click the + button on the bottom left, and add the keyboard to the list of inputs. 
+
